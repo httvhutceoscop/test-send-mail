@@ -1,12 +1,15 @@
 <?php
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
+
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require_once ("lib/PHPMailer/src/Exception.php");
-require_once ("lib/PHPMailer/src/PHPMailer.php");
-require_once ("lib/PHPMailer/src/SMTP.php");
+require_once ("./lib/PHPMailer/src/Exception.php");
+require_once ("./lib/PHPMailer/src/PHPMailer.php");
+require_once ("./lib/PHPMailer/src/SMTP.php");
 
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
